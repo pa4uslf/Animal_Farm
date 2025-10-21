@@ -11,7 +11,7 @@ from animals import sheep
 import animal
 import farm
 
-def build_animal(kind):
+def make_animal(kind):
     """Create an animal class."""
     if kind == 'cat':
         return cat.Cat()
@@ -26,7 +26,13 @@ def build_animal(kind):
 def main(animals):
     animal_farm = farm.Farm()
     for animal_kind in animals:
+<<<<<<< HEAD
         animal_farm.add_animal(build_animal(animal_kind))
+||||||| d759eea
+        animal_farm.add_animal(make_animal(animal_kind))
+=======
+        animal_farm.add_animal(create_animal(animal_kind))
+>>>>>>> create-animal
     animal_farm.print_contents()
 
 if __name__ == '__main__':
